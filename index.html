@@ -127,9 +127,75 @@
   .bar-fill.green { background: #2A6A1A; }
   .bar-val { width: 32px; text-align: right; color: var(--txt-3); font-size: 11px; flex-shrink: 0; }
 
+  /* ── Tablet (≤768px) ── */
+  @media (max-width: 768px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── Mobile (≤560px) ── */
   @media (max-width: 560px) {
-    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-    .col-extra { display: none; }
+    body { padding: 14px 12px; font-size: 13px; }
+    .wrapper { max-width: 100%; }
+
+    /* Header */
+    .persona-header { padding: 12px 14px; }
+    .persona-header h1 { font-size: 16px; }
+    .persona-header p  { font-size: 11px; }
+
+    /* Grids viram coluna única ou 2 colunas menores */
+    .grid-2 { grid-template-columns: 1fr 1fr; }
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+
+    /* Cards menores */
+    .card { padding: 10px 11px; }
+    .card-value { font-size: 14px; }
+    .card-sub   { font-size: 10px; }
+    .card-label { font-size: 10px; }
+
+    /* Títulos de seção */
+    .section-title { font-size: 11px; }
+    .section { margin-bottom: 20px; }
+
+    /* Tabela: esconde header, cada linha vira card empilhado */
+    .table-card { border-radius: 6px; }
+    .table-row.header { display: none; }
+    .table-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      padding: 10px 12px;
+      border-bottom: 0.5px solid #E8D5B7;
+    }
+    .col-name  { font-size: 12px; font-weight: 600; color: #1A1A1A; }
+    .col-val   { font-size: 11px; color: #4A3F35; }
+    .col-extra { font-size: 11px; display: block; color: #9A8878; }
+    .col-tag   { text-align: left; margin-top: 2px; }
+
+    /* Barras */
+    .bar-label { width: 80px; font-size: 11px; }
+    .bar-val   { font-size: 10px; }
+
+    /* Tags e pills */
+    .tag  { font-size: 10px; padding: 2px 7px; }
+    .tags-wrap { gap: 4px; }
+
+    /* Quotes e insights */
+    .quote   { font-size: 11px; padding: 8px 10px; }
+    .insight { font-size: 11px; padding: 10px 12px; }
+
+    /* Menu de âncoras: scroll horizontal no mobile */
+    nav { flex-wrap: nowrap !important; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+    nav::-webkit-scrollbar { display: none; }
+  }
+
+  /* ── Mobile pequeno (≤380px) ── */
+  @media (max-width: 380px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-4 { grid-template-columns: 1fr 1fr; }
+    body { padding: 12px 10px; }
   }
 </style>
 </head>
@@ -166,56 +232,56 @@
       </div>
       <div class="table-row">
         <div class="col-name">Helton Luiz de A. Gomes</div>
-        <div class="col-val">Master 110v</div><div class="col-val">R$ 8.919</div>
-        <div class="col-val">Lucianópolis/SP</div><div class="col-extra">Comerciante</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Master 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 8.919</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Lucianópolis/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Comerciante</div>
         <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Luciano André P. Corrêa</div>
-        <div class="col-val">Master 220v</div><div class="col-val">R$ 8.919</div>
-        <div class="col-val">S. Bernardo do Campo</div><div class="col-extra">Empresário</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Master 220v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 8.919</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>S. Bernardo do Campo</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Empresário</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Maria do S. P. Martins</div>
-        <div class="col-val">Master 220v</div><div class="col-val">R$ 8.919</div>
-        <div class="col-val">Campinas/SP</div><div class="col-extra">Comerciante</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Master 220v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 8.919</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Campinas/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Comerciante</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Vitor H. A. de Jesus</div>
-        <div class="col-val">Master 110v</div><div class="col-val">R$ 8.919</div>
-        <div class="col-val">Suzano/SP</div><div class="col-extra">Empresário</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Master 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 8.919</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Suzano/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Empresário</div>
         <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Janete Pereira Lima</div>
-        <div class="col-val">Mini 110v</div><div class="col-val">R$ 6.999</div>
-        <div class="col-val">São Paulo (V. Suzana)</div><div class="col-extra">Administradora</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Mini 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 6.999</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>São Paulo (V. Suzana)</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Administradora</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Renato Flaquer</div>
-        <div class="col-val">Mini 110v</div><div class="col-val">R$ 6.999</div>
-        <div class="col-val">São Paulo (Moema)</div><div class="col-extra">Veterinário</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Mini 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 6.999</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>São Paulo (Moema)</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Veterinário</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Fabio Ramos Barbosa</div>
-        <div class="col-val">Mini 110v</div><div class="col-val">R$ 6.999</div>
-        <div class="col-val">Bragança Paulista/SP</div><div class="col-extra">Químico</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Mini 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 6.999</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Bragança Paulista/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Químico</div>
         <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Paulo José dos Passos</div>
-        <div class="col-val">Mini 110v</div><div class="col-val">R$ 6.999</div>
-        <div class="col-val">Rio Claro/SP</div><div class="col-extra">Empresário</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Mini 110v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 6.999</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Rio Claro/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Empresário</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
       <div class="table-row">
         <div class="col-name">Australio R. Prado Filho</div>
-        <div class="col-val">Mini 220v</div><div class="col-val">R$ 6.999</div>
-        <div class="col-val">Porangaba/SP</div><div class="col-extra">Aposentado</div>
+        <div class="col-val"><span class="mob-lbl">Produto: </span>Mini 220v</div><div class="col-val"><span class="mob-lbl">Ticket: </span>R$ 6.999</div>
+        <div class="col-val"><span class="mob-lbl">Cidade: </span>Porangaba/SP</div><div class="col-extra"><span class="mob-lbl">Profissão: </span>Aposentado</div>
         <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
       </div>
     </div>
