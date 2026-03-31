@@ -209,15 +209,30 @@
 
   <div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:#9A8878;margin-bottom:6px;">Atalhos Rápidos</div>
   <nav style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:20px;">
-    <a href="#metricas"      style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#9A8878;background:#FAF5EE;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Métricas</a>
+    <a href="#metricas"      style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Métricas</a>
     <a href="#demografico"   style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Demográfico</a>
     <a href="#historico"     style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Histórico</a>
     <a href="#produto"       style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Produto</a>
     <a href="#uso"           style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Uso</a>
     <a href="#comportamento" style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Comportamento</a>
     <a href="#aceleradores"  style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Aceleradores</a>
-    <a href="#targeting"     style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#fff;background:#C92B1E;border:0.5px solid #C92B1E;border-radius:4px;padding:4px 9px;white-space:nowrap;">Targeting & Ads</a>
+    <a href="#targeting"     style="text-decoration:none;font-family:'Barlow Condensed','Barlow',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#4A3F35;background:#fff;border:0.5px solid #E8D5B7;border-radius:4px;padding:4px 9px;white-space:nowrap;">Targeting & Ads</a>
   </nav>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        document.querySelectorAll('nav a').forEach(function(b) {
+          b.style.background = '#fff';
+          b.style.color = '#4A3F35';
+          b.style.borderColor = '#E8D5B7';
+        });
+        this.style.background = '#C92B1E';
+        this.style.color = '#fff';
+        this.style.borderColor = '#C92B1E';
+      });
+    });
+  </script>
 
   <!-- Amostra -->
   <div id="amostra" class="section">
