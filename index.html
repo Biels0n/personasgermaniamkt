@@ -247,7 +247,11 @@ body {
 .col-name  { flex: 2.2; font-weight: 500; color: var(--grafite); }
 .col-val   { flex: 1;   color: var(--txt-mid); }
 .col-extra { flex: 1.4; color: var(--txt-mid); font-size: 12px; }
-.col-tag   { flex: 1.2; text-align: right; }
+.col-tag   { flex: 1.4; display: flex; gap: 4px; justify-content: flex-end; align-items: center; flex-wrap: wrap; }
+.table-row.header .col-name,
+.table-row.header .col-val,
+.table-row.header .col-extra,
+.table-row.header .col-tag { color: #fff; font-weight: 700; }
 
 /* ── Tags ── */
 .tag {
@@ -368,7 +372,7 @@ body {
   <div class="header-inner">
     <div class="header-eyebrow">ICP · Comprador SCNB · Germânia</div>
     <h1>Perfil do Comprador de Chopeira</h1>
-    <p class="header-sub">Base: 12 vendas fechadas · Jan–Abr 2026 · Canal WhatsApp via Ads</p>
+    <p class="header-sub">Base: 12 vendas fechadas · Jan–Abr 2026</p>
     <div class="header-kpis">
       <div class="kpi-box">
         <div class="kpi-label">Vendas</div>
@@ -425,7 +429,7 @@ body {
             <div class="card-sub">Total: R$ 96.207</div>
           </div>
           <div class="card">
-            <div class="card-label">Split Master / Mini</div>
+            <div class="card-label">Divisão Master / Mini</div>
             <div class="card-value lg">5 · 7</div>
             <div class="card-sub">42% Master · 58% Mini</div>
           </div>
@@ -455,7 +459,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">Lucianópolis/SP</div>
             <div class="col-extra">Comerciante</div>
-            <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
+            <div class="col-tag"><span class="tag tag-google">Google</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Luciano André P. Corrêa</div>
@@ -463,7 +467,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">S. Bernardo do Campo</div>
             <div class="col-extra">Empresário</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Maria do S. P. Martins</div>
@@ -471,7 +475,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">Campinas/SP</div>
             <div class="col-extra">Comerciante</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Vitor H. A. de Jesus</div>
@@ -479,7 +483,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">Suzano/SP</div>
             <div class="col-extra">Empresário</div>
-            <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
+            <div class="col-tag"><span class="tag tag-google">Google</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Janete Pereira Lima</div>
@@ -487,7 +491,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">São Paulo (V. Suzana)</div>
             <div class="col-extra">Administradora</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Renato Flaquer</div>
@@ -495,7 +499,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">São Paulo (Moema)</div>
             <div class="col-extra">Veterinário</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Fabio Ramos Barbosa</div>
@@ -503,7 +507,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">Bragança Paulista/SP</div>
             <div class="col-extra">Químico</div>
-            <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
+            <div class="col-tag"><span class="tag tag-google">Google</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Paulo José dos Passos</div>
@@ -511,7 +515,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">Rio Claro/SP</div>
             <div class="col-extra">Empresário</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Australio R. Prado Filho</div>
@@ -519,7 +523,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">Porangaba/SP</div>
             <div class="col-extra">Aposentado</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Antonio Mateos Lopes</div>
@@ -527,7 +531,7 @@ body {
             <div class="col-val">R$ 6.999</div>
             <div class="col-val">São Miguel Paulista/SP</div>
             <div class="col-extra">Comerciante</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">Rinaldo Adriano Ribeiro</div>
@@ -535,7 +539,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">Paulínia/SP</div>
             <div class="col-extra">Ger. Financeiro</div>
-            <div class="col-tag"><span class="tag tag-google">Google Ads</span></div>
+            <div class="col-tag"><span class="tag tag-google">Google</span><span class="tag">Ads</span></div>
           </div>
           <div class="table-row">
             <div class="col-name">William Batista De Miranda</div>
@@ -543,7 +547,7 @@ body {
             <div class="col-val">R$ 8.919</div>
             <div class="col-val">Mogi das Cruzes/SP</div>
             <div class="col-extra">Empresário</div>
-            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span></div>
+            <div class="col-tag"><span class="tag tag-unknown">Desconhecido</span><span class="tag">Ads</span></div>
           </div>
         </div>
         <p class="note" style="margin-top:8px;">Fontes: Google Ads (4 rastreadas) · Desconhecido (8 sem UTM/CRM)</p>
@@ -629,7 +633,7 @@ body {
             <div class="card-sub">Solteiro: 26% · Divorciado: 4%</div>
           </div>
           <div class="card">
-            <div class="card-label">Split Master / Mini</div>
+            <div class="card-label">Divisão Master / Mini</div>
             <div class="card-value">53% / 47%</div>
             <div class="card-sub">Mais equilibrado que base atual</div>
           </div>
