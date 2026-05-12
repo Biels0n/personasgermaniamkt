@@ -48,7 +48,9 @@ body {
 }
 .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
-.header-logo { height: 36px; width: auto; display: block; margin-bottom: 14px; opacity: 0.92; }
+.header-top  { display: flex; align-items: center; gap: 24px; margin-bottom: 20px; }
+.header-logo { height: 90px; width: auto; object-fit: contain; opacity: 0.92; flex-shrink: 0; }
+.header-text { flex: 1; }
 .header-eyebrow {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 11px;
@@ -74,7 +76,7 @@ body {
   font-weight: 500;
   color: rgba(255,255,255,0.55);
   letter-spacing: 0.3px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 .header-kpis {
   display: flex;
@@ -156,12 +158,12 @@ body {
 .section { margin-bottom: 28px; }
 .section-title {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 13px;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--txt-faint);
-  margin-bottom: 10px;
+  color: var(--grafite);
+  margin-bottom: 12px;
   padding-left: 10px;
   border-left: 3px solid var(--red);
 }
@@ -370,10 +372,14 @@ body {
 <!-- HEADER -->
 <header class="site-header">
   <div class="header-inner">
-    <img src="logo.png" alt="Germânia" class="header-logo">
-    <div class="header-eyebrow">ICP · Comprador SCNB · Germânia</div>
-    <h1>Perfil do Comprador de Chopeira</h1>
-    <p class="header-sub">Base: 12 vendas fechadas · Jan–Abr 2026</p>
+    <div class="header-top">
+      <img src="logo.png" alt="Germânia" class="header-logo">
+      <div class="header-text">
+        <div class="header-eyebrow">ICP · Comprador SCNB · Germânia</div>
+        <h1>Perfil do Comprador de Chopeira</h1>
+        <p class="header-sub">Base: 12 vendas fechadas · Jan–Abr 2026</p>
+      </div>
+    </div>
     <div class="header-kpis">
       <div class="kpi-box">
         <div class="kpi-label">Vendas</div>
@@ -564,7 +570,7 @@ body {
             <div class="col-canal"><span class="tag tag-unknown">Desconhecido</span></div>
           </div>
         </div>
-        <p class="note" style="margin-top:8px;">Fontes: Google Ads (4 rastreadas) · Desconhecido (8 sem UTM/CRM)</p>
+        <p style="margin-top:10px; font-family:'Barlow',sans-serif; font-size:12px; font-weight:600; color:#92580a; background:#fff8ed; border-left:3px solid #e6810a; border-radius:0 4px 4px 0; padding:7px 12px; line-height:1.55;">⚠ Agência: configurar rastreamento de canal de entrada — 8 de 12 vendas chegaram sem identificação de origem. Necessário implementar UTMs por campanha para distinguir Google Ads de Meta Ads.</p>
       </div>
 
     </div><!-- /tab-overview -->
