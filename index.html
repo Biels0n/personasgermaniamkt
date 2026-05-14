@@ -1227,6 +1227,74 @@ body {
         </div>
       </div>
 
+      <hr class="divider">
+
+      <div class="section">
+        <div class="section-title">Mapa de Cobertura para Ads · Teste A/B</div>
+        <p style="font-family:'gotham','Montserrat',sans-serif;font-size:13px;color:var(--txt-mid);margin-bottom:14px;line-height:1.6;">Zona A cobre o Interior SP (75% das vendas), Zona B a RMSP. Os círculos tracejados de 25km mostram cobertura de loja — comprador dentro desse raio tem suporte logístico imediato para recarga de chopp.</p>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:10px;align-items:center;">
+          <div style="display:flex;align-items:center;gap:7px;font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-mid);">
+            <span style="display:inline-block;width:28px;height:3px;background:var(--red);border-radius:2px;opacity:0.55;"></span>Zona A · Interior SP
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-mid);">
+            <span style="display:inline-block;width:28px;height:3px;background:var(--gold);border-radius:2px;opacity:0.65;"></span>Zona B · RMSP
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-mid);">
+            <span style="width:12px;height:12px;border-radius:50%;border:2px dashed #888;flex-shrink:0;"></span>Cobertura 25km · loja
+          </div>
+          <div style="display:flex;align-items:center;gap:7px;font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-mid);">
+            <span style="width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid #fff;flex-shrink:0;"></span>Comprador ICP
+          </div>
+        </div>
+        <div style="background:var(--card-bg);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+          <div id="ads-coverage-map" style="height:460px;"></div>
+        </div>
+        <div style="margin-top:8px;font-family:'gotham','Montserrat',sans-serif;font-size:11px;color:var(--txt-faint);line-height:1.6;">Preencha o array <code style="background:var(--card-bg-alt);padding:1px 5px;border-radius:3px;font-size:11px;">storeLocations</code> no script com as coordenadas do seu Google Maps para ativar os círculos de 25km por loja.</div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="section" style="margin-bottom:0;">
+        <div class="section-title">Estratégia A/B · Meta Ads</div>
+        <div class="grid-2">
+
+          <div style="background:var(--card-bg-alt);border-radius:var(--radius);border:1px solid var(--border);border-top:3px solid var(--red);overflow:hidden;">
+            <div style="padding:14px 16px;">
+              <div style="font-family:'bodega-sans','Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--red);margin-bottom:3px;">Zona A · Interior SP</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-faint);margin-bottom:12px;">9 compradores · 75% das vendas</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:11px;letter-spacing:0.8px;text-transform:uppercase;color:var(--txt-faint);margin-bottom:7px;">Cidades-alvo</div>
+              <div class="tags-wrap" style="margin-bottom:12px;">
+                <span class="tag">Campinas</span>
+                <span class="tag">Paulínia</span>
+                <span class="tag">Rio Claro</span>
+                <span class="tag">Bragança P.</span>
+                <span class="tag">Porangaba</span>
+                <span class="tag">Lucianópolis</span>
+              </div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:11px;letter-spacing:0.8px;text-transform:uppercase;color:var(--txt-faint);margin-bottom:7px;">Targeting Meta Ads</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:13px;color:var(--grafite);line-height:1.65;">Raio 30–50km por cidade · Interior do Estado de SP · Homens 35–55 · Proprietário de imóvel · Entretenimento em casa</div>
+            </div>
+          </div>
+
+          <div style="background:var(--card-bg-alt);border-radius:var(--radius);border:1px solid var(--border);border-top:3px solid var(--gold);overflow:hidden;">
+            <div style="padding:14px 16px;">
+              <div style="font-family:'bodega-sans','Oswald',sans-serif;font-size:18px;font-weight:700;color:var(--gold);margin-bottom:3px;">Zona B · RMSP</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:12px;color:var(--txt-faint);margin-bottom:12px;">3 compradores · 25% das vendas</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:11px;letter-spacing:0.8px;text-transform:uppercase;color:var(--txt-faint);margin-bottom:7px;">Cidades-alvo</div>
+              <div class="tags-wrap" style="margin-bottom:12px;">
+                <span class="tag">ABC Paulista</span>
+                <span class="tag">Suzano</span>
+                <span class="tag">Mogi das Cruzes</span>
+                <span class="tag">Capital · Zona Leste</span>
+              </div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:11px;letter-spacing:0.8px;text-transform:uppercase;color:var(--txt-faint);margin-bottom:7px;">Targeting Meta Ads</div>
+              <div style="font-family:'gotham','Montserrat',sans-serif;font-size:13px;color:var(--grafite);line-height:1.65;">Raio 60km de SP · ABC Paulista + Alto Tietê · Classe A/B · Imóvel próprio · Entretenimento em casa</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div><!-- /tab-ads -->
 
   </div><!-- /wrapper -->
@@ -1242,6 +1310,10 @@ function showTab(btn, id) {
   if (id === 'tab-demografico') {
     _initSpMap();
     setTimeout(function(){ if (window._spMap) window._spMap.invalidateSize(); }, 120);
+  }
+  if (id === 'tab-ads') {
+    _initAdsCoverageMap();
+    setTimeout(function(){ if (_adsCoverageMap) _adsCoverageMap.invalidateSize(); }, 120);
   }
 }
 
@@ -1293,6 +1365,72 @@ function _initSpMap() {
     bounds.push([b.lat, b.lng]);
   });
   _spMap.fitBounds(bounds, { padding: [40, 40] });
+}
+
+var _adsCoverageMap = null;
+function _initAdsCoverageMap() {
+  if (_adsCoverageMap || !document.getElementById('ads-coverage-map')) return;
+  _adsCoverageMap = L.map('ads-coverage-map', { scrollWheelZoom: false });
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 18
+  }).addTo(_adsCoverageMap);
+
+  L.circle([-22.60, -48.30], {
+    radius: 200000, color: '#C92B1F', weight: 2, opacity: 0.45,
+    fillColor: '#C92B1F', fillOpacity: 0.07, dashArray: '8 5'
+  }).bindTooltip('Zona A · Interior SP', { sticky: true }).addTo(_adsCoverageMap);
+
+  L.circle([-23.55, -46.45], {
+    radius: 80000, color: '#f79946', weight: 2, opacity: 0.55,
+    fillColor: '#f79946', fillOpacity: 0.09, dashArray: '8 5'
+  }).bindTooltip('Zona B · RMSP', { sticky: true }).addTo(_adsCoverageMap);
+
+  var storeLocations = [
+    // { name: 'Loja Campinas', lat: -22.90, lng: -47.06 },
+    // Adicione aqui as coordenadas das lojas do Google Maps
+  ];
+  storeLocations.forEach(function(s) {
+    L.circle([s.lat, s.lng], {
+      radius: 25000, color: '#666', weight: 1.5, opacity: 0.55,
+      fillColor: '#999', fillOpacity: 0.07, dashArray: '4 3'
+    }).addTo(_adsCoverageMap);
+    L.circleMarker([s.lat, s.lng], {
+      radius: 7, fillColor: '#fff', color: '#252018', weight: 2, opacity: 1, fillOpacity: 1
+    }).bindPopup(
+      '<div style="font-family:sans-serif;font-size:13px;line-height:1.6;">' +
+      '<strong>' + s.name + '</strong><br>' +
+      '<span style="color:#888;font-size:12px;">Cobertura 25km</span></div>',
+      { maxWidth: 200 }
+    ).addTo(_adsCoverageMap);
+  });
+
+  var zoneColor = { interior: '#C92B1F', grande: '#f79946', capital: '#252018' };
+  var buyers = [
+    { lat: -22.37, lng: -49.97, city: 'Lucianópolis',             name: 'Helton Luiz',          product: 'Master 110v', ticket: 'R$ 8.919', zone: 'interior' },
+    { lat: -22.91, lng: -47.07, city: 'Campinas',                 name: 'Maria do S. P. M.',     product: 'Master 220v', ticket: 'R$ 8.919', zone: 'interior' },
+    { lat: -22.95, lng: -46.54, city: 'Bragança Paulista',        name: 'Fabio Ramos',           product: 'Mini 110v',   ticket: 'R$ 6.999', zone: 'interior' },
+    { lat: -22.41, lng: -47.56, city: 'Rio Claro',                name: 'Paulo José',            product: 'Mini 110v',   ticket: 'R$ 6.999', zone: 'interior' },
+    { lat: -23.17, lng: -48.08, city: 'Porangaba',                name: 'Australio R. P. Filho', product: 'Mini 220v',   ticket: 'R$ 6.999', zone: 'interior' },
+    { lat: -22.77, lng: -47.15, city: 'Paulínia',                 name: 'Rinaldo A. Ribeiro',    product: 'Master 110v', ticket: 'R$ 8.919', zone: 'interior' },
+    { lat: -23.69, lng: -46.57, city: 'S. Bernardo do Campo',     name: 'Luciano A. P. Corrêa',  product: 'Master 220v', ticket: 'R$ 8.919', zone: 'grande'   },
+    { lat: -23.54, lng: -46.32, city: 'Suzano',                   name: 'Vitor H. A. de Jesus',  product: 'Master 110v', ticket: 'R$ 8.919', zone: 'grande'   },
+    { lat: -23.52, lng: -46.19, city: 'Mogi das Cruzes',          name: 'William B. de Miranda', product: 'Master 220v', ticket: 'R$ 8.919', zone: 'grande'   },
+    { lat: -23.59, lng: -46.66, city: 'São Paulo - Moema',        name: 'Renato Flaquer',        product: 'Mini 110v',   ticket: 'R$ 6.999', zone: 'capital'  },
+    { lat: -23.63, lng: -46.72, city: 'São Paulo - Vila Suzana',  name: 'Janete Pereira Lima',   product: 'Mini 110v',   ticket: 'R$ 6.999', zone: 'capital'  },
+    { lat: -23.51, lng: -46.44, city: 'São Paulo - S. Miguel P.', name: 'Antonio Mateos Lopes',  product: 'Mini 220v',   ticket: 'R$ 6.999', zone: 'capital'  }
+  ];
+  buyers.forEach(function(b) {
+    L.circleMarker([b.lat, b.lng], {
+      radius: 9, fillColor: zoneColor[b.zone], color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.92
+    }).bindPopup(
+      '<div style="font-family:sans-serif;font-size:13px;line-height:1.7;min-width:160px;">' +
+      '<strong>' + b.city + '</strong><br>' + b.name + '<br>' + b.product + ' · ' + b.ticket + '</div>',
+      { maxWidth: 240 }
+    ).addTo(_adsCoverageMap);
+  });
+
+  _adsCoverageMap.fitBounds([[-20.5, -53.5], [-25.5, -44.5]], { padding: [20, 20] });
 }
 </script>
 
